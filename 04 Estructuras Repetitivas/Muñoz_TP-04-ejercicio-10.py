@@ -11,10 +11,7 @@ while bandera > 10:
     modulador = modulador * 10
     bandera = math.trunc(bandera / 10)
 
-while True:
-    if num == 0:
-        break   
-    
+while num > 0:
     unidad = num % 10
     acc = acc + unidad * modulador
     modulador = math.trunc(modulador / 10)

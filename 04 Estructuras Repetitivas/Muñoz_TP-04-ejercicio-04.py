@@ -4,6 +4,6 @@ while True:
     num = int(input("Ingresa un numero entero: "))
     if num == 0:
         break
-    acc = acc + num
+    acc += num
 
 print(f"Total: {acc}")

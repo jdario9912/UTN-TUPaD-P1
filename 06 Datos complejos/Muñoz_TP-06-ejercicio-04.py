@@ -1,11 +1,17 @@
-class Persona:
-    def __init__(self, nombre, pais, edad):
-        self.nombre = nombre
-        self.pais = pais
-        self.edad = edad
-    
-    def saludar(self):
-        print(f"¡Hola! Soy {self.nombre}, vivo en {self.pais}, y tengo {self.edad} años.")
-        
-persona1 = Persona()
-persona1.saludar()
+contactos = {}
+cantidad = 5
+print(f"Ingresa {cantidad} contactos con sus numeros.")
+for i in range(cantidad + 1):
+    # print(f"{i + 1}")
+    nombre = input(f"{i + 1}\nNombre: ")
+    numero = input("Numero: ")
+    print("--------------------------\n")
+
+    contactos[nombre] = numero
+
+buscar = input("Buscar: ")
+
+if contactos[buscar]:
+    print(f"Nombre: {buscar}\nNumero: {contactos[buscar]}")
+else:
+    print(f"El contacto {buscar} no esta registrado.")

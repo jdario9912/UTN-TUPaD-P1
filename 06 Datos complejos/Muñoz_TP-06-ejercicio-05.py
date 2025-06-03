@@ -1,16 +1,15 @@
-from math import pi
+palabras_unicas = set()
+diccionario = {}
+entrada = input()
 
-class Circulo:
-    def __init__(self, radio):
-        self.radio = radio
-        
-    def calcular_area(self):
-        return pi * (self.radio^2)
-    
-    def calcular_perimetro(self):
-        return 2 * pi * self.radio
-    
-circulo1 = Circulo(5)
+for palabra in entrada.split():
+    if palabra not in palabras_unicas:
+        palabras_unicas.add(palabras_unicas.add(palabra))
 
-print(circulo1.calcular_area())
-print(circulo1.calcular_perimetro())
+    if palabra in diccionario.keys():
+        diccionario[palabra] += 1
+    else:
+        diccionario[palabra] = 1
+
+print(palabras_unicas)
+print(diccionario)
